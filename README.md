@@ -4,7 +4,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/744d0ce22e068d150fd3/maintainability)](https://codeclimate.com/github/superpuper32/inspirational-homepage/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/744d0ce22e068d150fd3/test_coverage)](https://codeclimate.com/github/superpuper32/inspirational-homepage/test_coverage)
 
-This application will interact with different APIs to display the current weather, a background image, and an inspirational quote. It will also provide users with a space to write down their goals for the day. You can think of this app as a fancy to-do list with dynamic data.
+The application interact with different APIs to display the current weather, a background image, and an inspirational quote.
+It also provide users with a space to write down their goals for the day. 
+This app as a fancy to-do list with dynamic data.
 
 ### Features
 

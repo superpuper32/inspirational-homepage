@@ -1,0 +1,1 @@
+export { fetchBackground } from './backgroundSlice';
