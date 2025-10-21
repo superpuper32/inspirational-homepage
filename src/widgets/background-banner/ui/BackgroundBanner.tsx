@@ -1,9 +1,24 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import styled from "@emotion/styled";
 
 import type { RootState } from "@/app/store";
 import { fetchBackground } from "@/features/change-background";
 import { ArrowButton } from "@/shared/ui/ArrowButton/ArrowButton";
+
+type ImageProps = {
+  src: string;
+};
+
+const BackgroundBannerWrapper = styled("div")<ImageProps>`
+  position: absolute;
+  background: url(${(props) => props.src}) no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+`;
 
 export const BackgroundBanner: React.FC = () => {
   const dispatch = useDispatch();
@@ -22,17 +37,8 @@ export const BackgroundBanner: React.FC = () => {
   };
 
   return (
-    <div
-      className="background-banner"
-      style={{
-        backgroundImage: `url(${currentBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        width: "100%",
-        height: "100vh",
-        position: "relative",
-      }}
+    <BackgroundBannerWrapper
+      src={currentBackground}
     >
       <div className="background-banner__controls">
         <ArrowButton
@@ -48,6 +54,6 @@ export const BackgroundBanner: React.FC = () => {
       </div>
 
       {loading && <div className="background-banner__loading">Loading...</div>}
-    </div>
+    </BackgroundBannerWrapper>
   );
 };

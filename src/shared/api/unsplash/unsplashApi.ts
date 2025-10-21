@@ -7,7 +7,7 @@ export const unsplashApi = {
                 `https://api.unsplash.com/photos/random?query=nature&orientation=landscape&client_id=${UNSPLASH_ACCESS_KEY}`
             );
             const data = await response.json();
-            return data.urls.regular;
+            return data.urls.full;
         } catch (error) {
             console.error('Error fetching background:', error);
             return 'default_background_url';
